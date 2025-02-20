@@ -9,3 +9,29 @@ header  {
     color: white;
     font-size: larger;
 }
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: rgb(255, 255, 255);
+
+    > span {
+        cursor: pointer;
+        &:hover {
+            color: aqua;
+        }
+    }
+
+    ul {
+        list-style: none;
+
+        li {
+            cursor: pointer;
+            &:hover {
+                color: aqua;
+            }
+        }
+    }
+}
