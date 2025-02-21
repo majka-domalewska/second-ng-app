@@ -1,5 +1,11 @@
-<p>this component works</p>
+<h3>To-do list</h3>
 
-@for (todo of todoItems(); track todo.id) {
-    <p>{{ todo.title }}</p>
-}
+<ul class="todo-list">
+    @for (todo of todoItems(); track todo.id) {
+        <li>
+            <input type="checkbox" value="" />
+            <p> {{ todo.title }} </p>
+            <p class="delete-button" (click)="deleteItem(todo.id)">Delete</p>
+        </li>
+    }
+</ul>
