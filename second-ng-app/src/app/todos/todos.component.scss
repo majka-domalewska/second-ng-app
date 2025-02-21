@@ -14,17 +14,5 @@ ul.todo-list {
             flex-grow: 1;
             margin-right: 10px;
         }
-
-        .delete-button {
-            background-color: red;
-            color: white;
-            border: none;
-            padding: 5px 10px;
-            cursor: pointer;
-
-            &:hover {
-                background-color: darkred;
-            }
-        }
     }
 }

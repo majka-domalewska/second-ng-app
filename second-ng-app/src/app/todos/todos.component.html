@@ -1,11 +1,11 @@
 <h3>To-do list</h3>
 
+@if (!todoItems().length) {
+    <p>Loading...</p>
+}
+
 <ul class="todo-list">
     @for (todo of todoItems(); track todo.id) {
-        <li>
-            <input type="checkbox" value="" />
-            <p> {{ todo.title }} </p>
-            <p class="delete-button" (click)="deleteItem(todo.id)">Delete</p>
-        </li>
+       <app-todo-item (todoToggled)="todoToggled($event)" [todo]="todo" />
     }
 </ul>
