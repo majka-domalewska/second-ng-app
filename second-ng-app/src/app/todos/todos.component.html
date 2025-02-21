@@ -3,9 +3,13 @@
 <ul class="todo-list">
     @for (todo of todoItems(); track todo.id) {
         <li>
-            <input type="checkbox" value="" />
+            <input type="checkbox" value="" (click)="isCompleted(todo.id)" />
             <p> {{ todo.title }} </p>
-            <p class="delete-button" (click)="deleteItem(todo.id)">Delete</p>
+            <div>
+                <p class="edit-button" (click)="editItem(todo.id)">Edit</p>
+                <p class="delete-button" (click)="deleteItem(todo.id)">Delete</p>
+            </div>
+            
         </li>
     }
 </ul>

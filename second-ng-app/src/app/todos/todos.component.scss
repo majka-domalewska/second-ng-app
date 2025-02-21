@@ -16,7 +16,7 @@ ul.todo-list {
         }
 
         .delete-button {
-            background-color: red;
+            background-color: rgb(255, 114, 114);
             color: white;
             border: none;
             padding: 5px 10px;
@@ -24,6 +24,19 @@ ul.todo-list {
 
             &:hover {
                 background-color: darkred;
+            }
+        }
+
+        .edit-button {
+            background-color: rgb(146, 146, 250);
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            text-align: center;
+
+            &:hover {
+                background-color: darkblue;
             }
         }
     }

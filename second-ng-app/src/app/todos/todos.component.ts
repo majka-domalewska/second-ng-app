@@ -30,5 +30,25 @@ export class TodosComponent implements OnInit {
 
   deleteItem(id: number) {
     this.todoItems.update((todos) => todos.filter((todo) => todo.id !== id));
+    console.log('item deleted');
+  }
+
+  isCompleted(id: number) {
+    this.todoItems.update((todos) => {
+      const todo = todos.find((todo) => todo.id === id);
+      if (todo) {
+        todo.completed = !todo.completed;
+    }
+    return todos;
+    });
+    console.log(`item completed: ${id}`);
+  }
+
+  editItem(id: number) {
+    const todo = this.todoItems().find((todo) => todo.id === id);
+    if (todo) {
+      todo.title = prompt('Enter new title', todo.title) || todo.title;
+    }
+    console.log(`item edited: ${id}`);
   }
 }
