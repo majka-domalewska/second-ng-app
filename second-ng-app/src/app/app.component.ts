@@ -9,7 +9,7 @@ import { HeaderComponent } from './components/header/header.component';
   template: `
   <app-header />
   <main>
-    <router-outlet></router-outlet>
+    <router-outlet />
   </main>
   `,
   styles: [`
